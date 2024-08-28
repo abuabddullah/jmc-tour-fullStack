@@ -6,11 +6,6 @@ export const GET = async (request, { params }) => {
 
   try {
     const location = await LocationModel.findById(params?._id);
-    console.log(params?._id);
-    console.log({
-      success: true,
-      location,
-    },);
     return Response.json(
       {
         success: true,
