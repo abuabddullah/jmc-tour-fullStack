@@ -31,7 +31,7 @@ const GoExotic = () => {
               class="bg-transparent rounded-lg shadow-lg overflow-hidden"
             >
               <div class="relative h-64 w-full">
-                <Link href={`location/${location?._id}`}>
+                <Link href={`/locations/${location?._id}`}>
                   <Image
                     src={location?.image}
                     alt={location?.name}
