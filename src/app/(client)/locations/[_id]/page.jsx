@@ -1,8 +1,10 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 
 // This function also runs at build time
 
-export default async function LocationPage({ params }) {
+export default function LocationPage({ params }) {
   const [location, setLocation] = useState({});
   const { _id } = params;
   useEffect(() => {
