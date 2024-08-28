@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 
-// This function also runs at build time
-
 export default function LocationPage({ params }) {
   const [location, setLocation] = useState({});
   const { _id } = params;
