@@ -8,13 +8,13 @@ export default function LocationPage({ params }) {
   const [location, setLocation] = useState({});
   const { _id } = params;
   useEffect(() => {
-    async function getLocationData(id) {
-      const res = await fetch(`/api/locations/location/${id}`);
+    async function getLocationData() {
+      const res = await fetch(`/api/locations/location/${_id}`);
       const data = await res.json();
       const { location } = data;
-      return location;
+      setLocation(location);
     }
-    setLocation(getLocationData(_id));
+    getLocationData();
   }, [_id]);
 
   return <div>page: {location ? location._id : "not found"}</div>;
